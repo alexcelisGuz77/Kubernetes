@@ -1,15 +1,25 @@
 
 
 INSTALCION MANUAL
+
 minikube profile [nombre_clouster]
+
 minikube service [Nombre-svc] (Abre navebador apuntando alos puertos corectos)
+
 minikube status (checar si status minikube)
+
 minikube logs  (Genara toda la informacion de miniKube)
+
 minikube ip (ver ip)
+
 minikube ssh (entrar a minikube)
+
 minikube profile list (ver un alista de los cluster)
+
 minikube start --driver=docker -p [NOMBRE-CLUSTER] --nodes=2 (crear un cluster con un cantidad especifica de nodos entre mas nodos mas recursos)
+
 minikube delete -p
+
 kubectl get nodes 
 
 Hacer Un posh en docker Hup
