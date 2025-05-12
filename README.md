@@ -100,3 +100,23 @@ borrar pods
 SELECTORES
 sececionar pod con una etiqueta=propiedad
 kubectl get pods -o wide --show-labels -l [Etiqueta]=[Propiedad]
+kubectl get pods -o wide --show-labels -l [Etiqueta]!=[Propiedad]
+kubectl get pods -o wide --show-labels -l '[Etiquetas] in([Propiedad],[Propiedad])'  (que este presente)
+kubectl get pods -o wide --show-labels -l '[Etiquetas] notin([Propiedad],[Propiedad])' (que no este presente)
+
+kubectl get pod [NombrePod] -o jsonpath={.metadata.annotations} (ver propiedades en esta caso anotaciones de un pod)
+
+Crear un Deployment 
+kubectl create deployment [nombrePod] --image=[Imagen]
+
+ver deployments
+kubectl get deploy
+
+ver Repli caset????
+kubectl get rs
+
+ver descripcion de deploy 
+kubectl describe deployment/[NombreDeploymet]
+
+
+
