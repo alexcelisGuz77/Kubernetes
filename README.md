@@ -8,6 +8,8 @@ minikube service [Nombre-svc] (Abre navebador apuntando alos puertos corectos)
 
 minikube status (checar si status minikube)
 
+minikube dashboard (docker dashboard)
+
 minikube logs  (Genara toda la informacion de miniKube)
 
 minikube ip (ver ip)
@@ -65,4 +67,36 @@ kubectl get svc
 hacer local un puerto de un contenedorpod de minikube: 
 kubectl port-forward [NombrePod] 9999:80
 
+ver especificaciones del pod
+kubectl get pod [NombrePod] -o yaml
 
+Crear o configurar un pod(Util al modificar el fichero)
+kubectl apply -f [nombreArchivo].yaml
+
+ver labels de un pods 
+kubectl get pods -o wide --show-labels
+kubectl get pod [NombrePod] -o wide --show-labels
+kubectl get pod [NombrePod] -o wide --show-labels -L [Label] (agrega una colupna con un etiqueta labels)
+
+Agrega Etiquetas
+kubectl label pod [NombrePod] [Etiqueta]=[Propiedad]
+Modificar Etiquetas 
+kubectl label --overwrite pod/[NombrePod] [EtiquetaLabel]=[Propiedad]
+Eliminar Etiquetas 
+kubectl label pod/[NombrePod] responsable-
+
+borrar pods
+ kubectl delete pod [NombrePod]
+ kubectl delete pod/[NombrePod]
+ kubectl delete pod [NombrePod], [NombrePod] ... 
+ kubectl delete pod [NombrePod] --grace-period=5 (borra despuedes de un periodo de tiempo)
+ kubectl delete pod [NombrePod] --now (borra sin espera a terminar procesos)
+ kubectl delete pod --all (Borra todos los pods)
+
+ Multiples container
+  kubectl logs -f [NombrePod] -c [NombreContainer] (ver Logs del container dentro)
+  kubectl exec [NombrePod] -c [NombreContainer]  -- date (dia del segundo container)
+
+SELECTORES
+sececionar pod con una etiqueta=propiedad
+kubectl get pods -o wide --show-labels -l [Etiqueta]=[Propiedad]
