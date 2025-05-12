@@ -52,6 +52,9 @@ kubectl run apache --image=httpd --port=8080
 ver los logs:
 kubectl logs [nombrePod] 
 
+Listar diferentes componentes 
+kubectl get deploy,pods,rs
+
 se queda en logs:	
 kubectl logs -f [nombrePod]
 
@@ -117,6 +120,14 @@ kubectl get rs
 
 ver descripcion de deploy 
 kubectl describe deployment/[NombreDeploymet]
+
+
+ kubectl edit deploy nginx-d(modificar de manera dianamica)
+ kubectl get deploy nginx-d -o yaml (optener yaml de undeploy)
+
+Reescalar un deploy
+kubectl scale deploy -l [EtiquetaDeploy]=[Propiedad] --replicas=[CantidadReplicas]
+ 
 
 
 
