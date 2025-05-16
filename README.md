@@ -130,6 +130,9 @@ kubectl scale deploy -l [EtiquetaDeploy]=[Propiedad] --replicas=[CantidadReplica
 
 optener los endpoins de minikube
 kubectl get endpoints
+
+ver a detalle un endponts
+kubectl get endpoints [NombreEndpoints] -o yaml
  
 
 
