@@ -127,6 +127,9 @@ kubectl describe deployment/[NombreDeploymet]
 
 Reescalar un deploy
 kubectl scale deploy -l [EtiquetaDeploy]=[Propiedad] --replicas=[CantidadReplicas]
+
+optener los endpoins de minikube
+kubectl get endpoints
  
 
 
