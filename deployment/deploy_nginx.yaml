@@ -2,6 +2,8 @@ apiVersion: apps/v1 # i se Usa apps/v1beta2 para versiones anteriores a 1.9.0
 kind: Deployment
 metadata:
   name: nginx-d
+  labels:
+    estadosr: "19"
 spec:
   selector:   #permite seleccionar un conjunto de objetos que cumplan las condicione
     matchLabels:
